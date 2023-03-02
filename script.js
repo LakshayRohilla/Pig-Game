@@ -61,7 +61,7 @@ btnHold.addEventListener('click', function () {
         document.getElementById(`score--${activePlayer}`).textContent = scores[activePlayer];
 
         // Check if player`s score is >= 100
-        if (scores[activePlayer] >= 10) {
+        if (scores[activePlayer] >= 100) {
             // Finish the game
             playing = false;
             document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
@@ -72,6 +72,23 @@ btnHold.addEventListener('click', function () {
             switchPlayer();
         }
     }
+})
+
+btnNew.addEventListener('click', function () {
+    // For this also you can make a separate function to make the code DRY.
+    scores[0] = 0;
+    scores[1] = 0;
+    document.getElementById(`current--1`).textContent = 0;
+    document.getElementById(`current--0`).textContent = 0;
+    activePlayer = 0;
+    player0El.classList.add('player--active');
+    player1El.classList.remove('player--active');
+    playing = true;
+    diceEl.classList.add('hidden');
+    score0El.textContent = 0;
+    score1El.textContent = 0;
+    player0El.classList.remove('player--winner');
+    player1El.classList.remove('player--winner');
 })
 
 
