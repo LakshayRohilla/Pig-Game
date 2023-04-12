@@ -1,4 +1,5 @@
 # **Pig-Game**
+Wanna try this application : https://dice-game-lr.netlify.app/
 ![image](https://user-images.githubusercontent.com/45042261/222332384-1502c2d5-7d9c-4df8-979e-808fa62516b4.png)
 
 **Flow Chart of the game :**
